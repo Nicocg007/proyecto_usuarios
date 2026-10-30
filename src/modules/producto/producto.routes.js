@@ -8,12 +8,12 @@ console.log(Object.keys(productoCtr));
 
 const router = Router();
 
-/*
-router.get("/usuarios", usuarioCtr.obtenerUsuarios);
-router.get("/usuarios/:id", usuarioCtr.obtenerUsuarioID);
-router.post("/usuarios", usuarioCtr.crearUsuario);
-router.delete("/usuarios/:id", usuarioCtr.borrarUsuario);
-router.put("/usuarios/:id", usuarioCtr.actualizarUsuario);
-*/
+
+router.get("/Productos", productoCtr.obtenerProductos);
+router.get("/Productos/:id", productoCtr.obtenerProductoID);
+router.post("/Productos", productoCtr.crearProducto);
+router.delete("/Productos/:id", productoCtr.borrarProducto);
+router.put("/Productos/:id", productoCtr.actualizarProducto);
+
 
 export default router;
