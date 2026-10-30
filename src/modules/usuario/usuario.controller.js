@@ -43,3 +43,23 @@ error: `ocurrió un error en la insercion:${error}`,
 });
 }
 };
+export const borrarUsuario = async (req, res) => {
+try {
+const results = await UserModel.delete(req.params.id);
+res.json({ results });
+} catch (error) {
+res.status(500).json({
+error: `ocurrió un error al eliminar:${error}`,
+});
+}
+};
+export const actualizarUsuario = async (req, res) => {
+try {
+const results = await UserModel.update(req.params.id, req.body);
+res.json({ results });
+} catch (error) {
+res.status(500).json({
+error: `ocurrió un error al actualizar ${error}`,
+});
+}
+};
