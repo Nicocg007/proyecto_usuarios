@@ -12,3 +12,14 @@ export const obtenerUsuarios = async (req, res) => {
     });
   }
 };
+export const obtenerUsuarioPorID = async (req, res) => {
+  // codigo protegido con try..catch
+  try {
+    const results = await UserModel.findById(req.params.id);
+    res.json({ results });
+  } catch (error) {
+    res.status(500).json({
+      error: `error al listar : ${error}`,
+    });
+  }
+};
