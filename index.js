@@ -12,12 +12,12 @@ const PORT = 4100;
 app.use(express.json()); // Para que el servidor entienda JSON en el body
 app.use(cors());
 
-/*
+
 app.use("/api", usuarioRoutes);
 app.listen(PORT, () => {
   console.log(`Server iniciado en : http://localhost:${PORT}`);
 });
-*/
+
 
 app.use("/api", productoRoutes);
 app.listen(PORT, () => {
