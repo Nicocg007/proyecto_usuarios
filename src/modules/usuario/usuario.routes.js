@@ -10,7 +10,7 @@ const router = Router();
 
 
 router.get("/usuarios", usuarioCtr.obtenerUsuarios);
-router.get("/usuarios/:id", usuarioCtr.obtenerUsuarioPorID);
+router.get("/usuarios/:id", usuarioCtr.obtenerUsuarioID);
 
 
 export default router;
